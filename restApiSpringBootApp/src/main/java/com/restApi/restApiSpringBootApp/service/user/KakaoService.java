@@ -23,14 +23,14 @@ public class KakaoService {
     private final RestTemplate restTemplate;
     private final Gson gson;
 
-    @Value("${spring.url.base}")
-    private String baseUrl;
+    //@Value("${spring.url.base}")
+    private String baseUrl = "http://localhost:8080";
 
-    @Value("${social.kakao.client-id}")
-    private String kakaoClientId;
+    //@Value("${social.kakao.client-id}")
+    private String kakaoClientId = "9692036ba8d849a74cd1eb05359a2759";
 
-    @Value("${social.kakao.redirect}")
-    private String kakaoRedirectUri;
+    //@Value("${social.kakao.redirect}")
+    private String kakaoRedirectUri="http://localhost:8080/oauth/kakao/redirect";
 
     public KakaoProfile getKakaoProfile(String kakaoAccessToken) {
         HttpHeaders headers = new HttpHeaders();
